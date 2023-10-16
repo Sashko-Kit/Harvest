@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbw45q6auhv0c"]
+
+[ext_resource type="Texture2D" uid="uid://db7vql310o3y5" path="res://pkid_forward.png" id="1_dym66"]
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(174, 220)
+texture = ExtResource("1_dym66")

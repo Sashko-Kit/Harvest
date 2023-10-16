@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dirqgwbhouh80"]
+
+[ext_resource type="Texture2D" path="res://background.jpg" id="1_npkys"]
+
+[node name="MainPlace" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_npkys")
+expand_mode = 1
