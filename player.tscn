@@ -6,5 +6,4 @@
 gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(174, 220)
 texture = ExtResource("1_dym66")
