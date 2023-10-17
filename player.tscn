@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbw45q6auhv0c"]
+[gd_scene load_steps=3 format=3 uid="uid://dbw45q6auhv0c"]
 
 [ext_resource type="Texture2D" uid="uid://db7vql310o3y5" path="res://pkid_forward.png" id="1_dym66"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_am74u"]
+radius = 124.0
+height = 416.0
 
 [node name="Player" type="RigidBody2D"]
 gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_dym66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 0)
+shape = SubResource("CapsuleShape2D_am74u")
