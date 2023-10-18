@@ -1,16 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://dirqgwbhouh80"]
+[gd_scene load_steps=10 format=3 uid="uid://dirqgwbhouh80"]
 
-[ext_resource type="Texture2D" uid="uid://c2vd7jm5ewf44" path="res://background.jpg" id="1_npkys"]
+[ext_resource type="Texture2D" uid="uid://bffkh56ol4r5m" path="res://voidtile.png" id="1_q3n4m"]
+[ext_resource type="Script" path="res://my_level.gd" id="1_wa1we"]
 [ext_resource type="PackedScene" uid="uid://dbw45q6auhv0c" path="res://player.tscn" id="2_5id8j"]
+[ext_resource type="Texture2D" uid="uid://bu1ryruyyugeo" path="res://grasstopedgelefttile.png" id="4_amn3y"]
+[ext_resource type="Texture2D" uid="uid://c81n16lk3xwh8" path="res://grasstopedgerighttile.png" id="5_qwwbs"]
+[ext_resource type="Texture2D" uid="uid://bjh2egr3qxamn" path="res://grasstoptile.png" id="6_0jwtp"]
+[ext_resource type="Texture2D" uid="uid://bhhikr7jeqwwu" path="res://cliffsidetile.png" id="7_u1xyk"]
+[ext_resource type="Texture2D" uid="uid://dwb6xw7qe4mbh" path="res://cliffsideedgerighttile.png" id="8_ll40t"]
+[ext_resource type="Texture2D" uid="uid://bpiwegsdxm8r2" path="res://cliffsideedgelefttile.png" id="9_pcsyb"]
 
 [node name="MainPlace" type="Node2D"]
-
-[node name="Background" type="TextureRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_npkys")
-expand_mode = 1
+script = ExtResource("1_wa1we")
 
 [node name="Player" parent="." instance=ExtResource("2_5id8j")]
 position = Vector2(148, 321)
-scale = Vector2(0.340823, 0.321064)
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -100
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_q3n4m")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Grasstopedgelefttile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(32, 292)
+texture = ExtResource("4_amn3y")
+
+[node name="Grasstopedgerighttile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1108, 292)
+texture = ExtResource("5_qwwbs")
+
+[node name="Grasstoptile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(571, 292)
+texture = ExtResource("6_0jwtp")
+
+[node name="Cliffsidetile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(561, 430)
+scale = Vector2(1.04444, 1)
+texture = ExtResource("7_u1xyk")
+
+[node name="Cliffsideedgerighttile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1112, 432)
+texture = ExtResource("8_ll40t")
+
+[node name="Cliffsideedgelefttile" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(11, 430)
+texture = ExtResource("9_pcsyb")
